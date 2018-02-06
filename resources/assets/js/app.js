@@ -17,6 +17,7 @@ Vue.use(Vuex);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+Vue.component('select2', require('./components/Select2.vue'));
 Vue.component('topo', require('./components/Topo.vue'));
 Vue.component('painel', require('./components/Painel.vue'));
 Vue.component('caixa', require('./components/Caixa.vue'));

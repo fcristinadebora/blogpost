@@ -8,6 +8,20 @@
 
       <div class="row">
         <div class="col-md-4">
+          <label>SELECT FUCKING 2, MOTHERFUCKER</label>
+
+          <select2
+            :options="[
+              { id: 1, text: 'Hello' },
+              { id: 2, text: 'World' }
+            ]">
+            <option disabled value="0">Select one</option>
+          </select2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
           <caixa qtd="80" titulo="Artigos" url="{{route('artigos.index')}}" cor="orange" icone="ion ion-pie-graph"></caixa>
         </div>
         <div class="col-md-4">
