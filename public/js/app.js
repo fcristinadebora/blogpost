@@ -51532,12 +51532,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-	props: ['options', 'value'],
+	props: ['name', 'options', 'value'],
 	mounted: function mounted() {
 		var vm = this;
 		$(this.$el)
 		// init select2
-		.select2({ data: this.options }).val(this.value).trigger('change')
+		.select2({ data: this.options }).val(this.value || 0).trigger('change')
 		// emit event on change.
 		.on('change', function () {
 			vm.$emit('input', this.value);
@@ -51566,7 +51566,12 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("select", { staticClass: "form-control" }, [_vm._t("default")], 2)
+  return _c(
+    "select",
+    { staticClass: "form-control", attrs: { name: _vm.name } },
+    [_vm._t("default")],
+    2
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

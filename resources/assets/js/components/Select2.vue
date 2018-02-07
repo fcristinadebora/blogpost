@@ -1,18 +1,18 @@
 <template>
-	<select class="form-control">
+	<select :name="name" class="form-control">
 		<slot></slot>
 	</select>
 </template>
 
 <script>
 	export default {
-		props: ['options', 'value'],
+		props: ['name', 'options', 'value'],
 		mounted: function () {
 			var vm = this
 			$(this.$el)
 			// init select2
 			.select2({ data: this.options })
-			.val(this.value)
+			.val(this.value || 0)
 			.trigger('change')
 			// emit event on change.
 			.on('change', function () {

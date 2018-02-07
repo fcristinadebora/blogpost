@@ -10,13 +10,17 @@
         <div class="col-md-4">
           <label>SELECT FUCKING 2, MOTHERFUCKER</label>
 
-          <select2
-            :options="[
-              { id: 1, text: 'Hello' },
-              { id: 2, text: 'World' }
-            ]">
-            <option disabled value="0">Select one</option>
-          </select2>
+          <form method="GET" action="#">
+            <select2
+              name="select2"
+              :options="[
+                { id: 1, text: 'Hello' },
+                { id: 2, text: 'World' }
+              ]">
+              <option disabled value="0">Select one</option>
+            </select2>
+            <button type="submit">Test it!</button>
+          </form>
         </div>
       </div>
 
